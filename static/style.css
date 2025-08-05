@@ -1,0 +1,41 @@
+body {
+    background-image: url("/static/1752352799333.png"); /* place this image inside /static folder */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
+    padding: 30px;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a {
+    color: #ffd700;
+}
+
