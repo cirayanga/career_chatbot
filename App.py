@@ -75,7 +75,6 @@ career_map = {
     "social": ["Social Worker", "Psychologist", "Community Manager", "HR Specialist"]
 }
 
-
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
@@ -104,29 +103,10 @@ def index():
         return render_template("results.html", name=name, suggestions=suggestions, career_info=career_info)
 
     return render_template("index.html")
+
 if __name__ == "__main__":
     app.run(debug=True, port=5050)
-from flask import Flask, render_template, request
 
-app = Flask(__name__)
-
-@app.route('/', methods=['GET', 'POST'])  # ← This is important
-def index():
-    if request.method == 'POST':
-        name = request.form['name']
-        interests = request.form['interests']
-        skills = request.form['skills']
-        subjects = request.form['subjects']
-
-        # Your logic here (e.g., generating suggestions)
-        suggestions = ["Software Engineer", "Data Analyst", "UX Designer"]  # Example
-
-        return render_template('results.html', name=name, suggestions=suggestions)
-    
-    return render_template('index.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 
 
