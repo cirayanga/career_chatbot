@@ -1,10 +1,6 @@
 from flask import Flask, render_template, request
 import os
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # default to 5000 if not on Render
-    app.run(host='0.0.0.0', port=port)
-
 app = Flask(__name__)
 
 # Career descriptions
@@ -109,14 +105,9 @@ def index():
 
     return render_template("index.html")
 
-if __name__ == "__main__":
-    app.run(debug=True, port=5050)
-
-
-
-
-
-
-
+# ✅ Run the app with correct port for Render
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 10000))  # Render sets PORT automatically
+    app.run(host='0.0.0.0', port=port)
 
 
