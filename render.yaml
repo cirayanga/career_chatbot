@@ -1,9 +1,8 @@
 services:
   - type: web
-    name: ai-career-chatbot
+    name: career-chatbot
     env: python
     buildCommand: ""
-    startCommand: "python App.py"
-    envVars:
-      - key: PORT
-        value: 5050
+    startCommand: "python app.py"
+
+
